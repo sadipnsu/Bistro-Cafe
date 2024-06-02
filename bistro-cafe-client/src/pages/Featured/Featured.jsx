@@ -17,7 +17,7 @@ const Featured = () => {
                        Voluptas animi esse doloribus, obcaecati repudiandae nostrum ratione dicta tenetur autem eligendi neque,
                        quasi quo ullam quas ipsa sunt? Voluptatem architecto repellat natus nemo nobis reiciendis, exercitationem,
                        deleniti quod quibusdam minima assumenda quos vel officiis modi id. Veritatis perspiciatis amet qui deleniti.</p>
-                    <button className="btn btn-outline border-0 border-b-4">Order Now</button>   
+                    <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button>   
                 </div>
             </div>
         </div>
