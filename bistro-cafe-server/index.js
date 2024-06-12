@@ -32,6 +32,11 @@ async function run() {
     const cartCollection = client.db("bistroCafeDB").collection("carts");
 
     //users related api
+    app.get("/users", async (req, res) => {
+      const result = await userCollection.find().toArray();
+      res.send(result);
+    })
+
     app.post("/users", async (req, res) => {
       const user = req.body;
 
@@ -42,7 +47,7 @@ async function run() {
       if(existingUser) {
         return res.send({message: "User already exists", insertedId: null})
       }
-      
+
       const result = await userCollection.insertOne(user);
       res.send(result);
     })
