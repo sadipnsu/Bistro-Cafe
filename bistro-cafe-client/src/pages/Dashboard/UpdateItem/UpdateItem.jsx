@@ -92,7 +92,6 @@ const UpdateItem = () => {
                             className="input input-bordered w-full" />
                         </div>
                      </div>
-
                     {/* recipe details */}
                     <div className="form-control">
                             <label className="label">
