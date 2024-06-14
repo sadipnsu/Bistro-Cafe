@@ -92,7 +92,6 @@ const AllUsers = () => {
                                 </td>
                             </tr>)
                         }
-                    
                     </tbody>
                 </table>
             </div>
