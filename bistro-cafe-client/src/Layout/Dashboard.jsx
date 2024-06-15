@@ -54,9 +54,9 @@ const Dashboard = () => {
                                 <FaAd></FaAd>
                                 Add Review</NavLink>
                             </li>
-                            <li><NavLink to="/dashboard/bookings">
+                            <li><NavLink to="/dashboard/paymentHistory">
                                 <FaList></FaList>
-                                My Bookings</NavLink>
+                                Payment History</NavLink>
                             </li>
                         </>
                     }
