@@ -67,6 +67,19 @@ const CheckoutForm = () => {
             if(paymentIntent.status === 'succeeded'){
                 console.log('transaction id', paymentIntent.id);
                 setTransactionId(paymentIntent.id);
+
+             //now save the payment in database
+             const payment = {
+                email: user.email,
+                price: Totalprice,
+                transactionId: paymentIntent.id,
+                date: new Date(),
+                cartIds: cart.map(item => item._id),
+                menuItemIds: cart.map(item => item.menuId),
+                status: 'pending'
+             }
+             const res = await axiosSecure.post('/payments', payment);
+             console.log('payment saved', res.data);
             }
         }
     }
@@ -87,13 +100,13 @@ const CheckoutForm = () => {
                         },
                     },
                 }}
-      ></CardElement>
-      <button className="btn btn-sm btn-primary my-4" type="submit"
-       disabled={!stripe || !clientSecret}>
-        Pay
-      </button>
-      <p className="text-red-600">{error}</p>
-      {transactionId && <p className="text-green-600">Your transaction id: {transactionId}</p>}
+            ></CardElement>
+            <button className="btn btn-sm btn-primary my-4" type="submit"
+            disabled={!stripe || !clientSecret}>
+                Pay
+            </button>
+            <p className="text-red-600">{error}</p>
+            {transactionId && <p className="text-green-600">Your transaction id: {transactionId}</p>}
         </form>
     );
 };
