@@ -23,7 +23,7 @@ const AdminHome = () => {
                     user?.displayName ? user.displayName : 'Back'
                 }
             </h2>
-            <div className="stats shadow mx-16 px-12">
+            <div className="stats shadow mx-16 py-8 gap-16">
   
                 <div className="stat">
                     <div className="stat-figure text-secondary">
