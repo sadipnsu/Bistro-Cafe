@@ -56,10 +56,12 @@ const SignUp = () => {
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left">
-                            <h1 className="text-5xl font-bold">Sign up now!</h1>
-                            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <div className="">
+                                <img alt="Night" src="https://i.ibb.co/Q8YKqTr/authentication1-removebg-preview.png"className=" "/>
+                            </div>
                         </div>
                         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <p className="text-center text-lg text-[#000] pt-6  font-bold">Sign up to your account</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">

@@ -20,7 +20,7 @@ const menu = () => {
     const offered = menu.filter(item => item.category === "offered");
 
     return (
-        <div>
+        <div className='mb-12'>
             <Helmet>
                 <title>Bistro Cafe | Menu</title>
             </Helmet>

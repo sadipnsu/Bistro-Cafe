@@ -18,11 +18,15 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import Contact from "../pages/Contact/Contact";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Reservation from "../pages/Dashboard/Reservation/Reservation";
   
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -35,6 +39,10 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
         {
           path: 'order/:category',
           element: <Order></Order>
+        },
+        {
+          path: 'contact',
+          element: <Contact></Contact>
         },
         {
           path: 'login',
@@ -71,7 +79,11 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
           path: 'paymentHistory',
           element: <PaymentHistory></PaymentHistory>
         },
-
+        {
+          path: 'reservation',
+          element: <Reservation></Reservation>
+        },
+        
         //admin only routes
         {
           path: 'adminHome',
@@ -94,7 +106,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
         {
           path:'users',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-        }
+        },
       ]
     }
   ]);

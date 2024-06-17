@@ -21,13 +21,13 @@ const Order = () => {
     const pizza = menu.filter(item => item.category === "pizza");
     const drinks = menu.filter(item => item.category === "drinks");
     return (
-        <div>
+        <div className='mb-12'>
              <Helmet>
                 <title>Bistro Cafe | Order Food</title>
             </Helmet>
             <Cover img={orderCoverImg} title="Order Food"></Cover>
-            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
+            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)} className="items-center">
+                <TabList >
                     <Tab>Salad</Tab>
                     <Tab>Pizza</Tab>
                     <Tab>Soup</Tab>

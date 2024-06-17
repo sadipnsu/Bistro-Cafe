@@ -1,4 +1,4 @@
-import { FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useNavigate } from "react-router-dom";
@@ -24,12 +24,13 @@ const SocialLogin = () => {
         })
     }
     return (
-        <div className="p-8">
+        <div className="">
               <div className="divider"></div> 
             <div>
                 <button onClick={handleGoogleSignIn} className="btn">
                     <FaGoogle className="mr-2"></FaGoogle>
-
+                    <FaFacebook className="mr-2"></FaFacebook>
+                    <FaGithub className="mr-2"></FaGithub>
                 </button>
             </div>
         </div>

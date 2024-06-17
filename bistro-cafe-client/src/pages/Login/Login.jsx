@@ -66,10 +66,12 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col md:flex-row-reverse">
                     <div className="text-center md:w-1/2 lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <div className="">
+                                <img alt="Night" src="https://i.ibb.co/Q8YKqTr/authentication1-removebg-preview.png"className=" "/>
+                        </div>
                     </div>
                     <div className="card shrink-0 md:w-1/2 max-w-sm shadow-2xl bg-base-100">
+                    <p className="text-center text-lg text-[#000] pt-6  font-bold">Login to your account</p>
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -94,7 +96,7 @@ const Login = () => {
                                 {/* <button  className="btn btn-outline btn-xs mt-2">Validate</button> */}
                             </div>
                             <div className="form-control mt-6">
-                                <input disabled={disabled} className="btn btn-primary" type="submit" value="Login"/>
+                                <input disabled={disabled} className="btn btn-primary rounded-lg bg-[#DAB884]" type="submit" value="Login"/>
                             </div>
                         </form>
                         <p className='px-20'><small>New Here? <Link to="/signup">Create a New Account</Link></small></p>
