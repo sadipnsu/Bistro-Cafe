@@ -100,7 +100,7 @@ import Reservation from "../pages/Dashboard/Reservation/Reservation";
         {
           path: 'updateItem/:id',
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+          loader: ({params}) => fetch(`https://bistro-cafe-server-eta.vercel.app/menu/${params.id}`)
         },
         
         {

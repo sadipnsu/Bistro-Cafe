@@ -4,7 +4,7 @@ import useAuth from "./useAuth";
 import React from "react";
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000'
+  baseURL: 'https://bistro-cafe-server-eta.vercel.app'
 });
 
 const useAxiosSecure = () => {
